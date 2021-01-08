@@ -2,15 +2,18 @@
   "name": "image-filter-gzamora-dev",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
   "engines": {
     "node": "10.19.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "tsc && node ./www/server.js",
+    "tsc": "tsc",
+    "dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
+    "prod": "tsc && node ./www/server.js",
     "clean": "rm -rf www/ || true",
     "build": "npm run clean && tsc && cp package.json www/package.json && mkdir www/tmp/ && cd www && zip -r Archive.zip . && cd ..",
-    "dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
