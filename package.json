@@ -7,10 +7,7 @@
     "node": "10.19.0"
   },
   "scripts": {
-    "start": "tsc && node ./www/server.js",
-    "tsc": "tsc",
     "dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
-    "prod": "tsc && node ./www/server.js",
     "clean": "rm -rf www/ || true",
     "build": "npm run clean && tsc && cp package.json www/package.json && mkdir www/tmp/ && cd www && zip -r Archive.zip . && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
