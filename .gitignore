@@ -1,5 +1,6 @@
 node_modules
 www
+src/util/tmp
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
 !.elasticbeanstalk/*.cfg.yml
