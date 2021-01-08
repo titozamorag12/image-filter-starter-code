@@ -40,7 +40,7 @@ import { deleteLocalFiles, filterImageFromURL, getTempFiles, isImageValidAndExis
         res.status(200).sendFile(filteredImagePath);
 
         const tempFiles = getTempFiles();
-        //deleteLocalFiles(tempFiles);
+        deleteLocalFiles(tempFiles);
       } else {
         return res.status(415).send({ message: "Unsupported image received type." });
       }
